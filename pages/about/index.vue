@@ -36,6 +36,7 @@ export default {
     return {
       meta: {
         title: 'About',
+        titleElement: 'About | サイトタイトル',
         description: 'Aboutページ個別のディスクリプション',
         keywords: 'Aboutページ個別のキーワード',
         type: 'article',

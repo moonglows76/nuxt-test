@@ -1,20 +1,16 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
+      <NuxtLink
+        to="/"
+      >
+        <Logo />
+      </NuxtLink>
       <h1 class="title">
         {{ meta.title }}
         <span>red</span>
       </h1>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
@@ -23,7 +19,29 @@
         >
           GitHub
         </a>
+        <NuxtLink
+          to="/"
+          class="button--grey"
+        >
+          Top
+        </NuxtLink>
+        <NuxtLink
+          to="/about"
+          class="button--grey"
+        >
+          About
+        </NuxtLink>
+        <a
+          href="#div-id"
+          v-smooth-scroll
+          class="button--grey"
+        >
+          Anchor
+        </a>
       </div>
+      <div style="height: 1500px;"></div>
+      <div id="div-id">ここです</div>
+      <div style="height: 1500px;"></div>
     </div>
   </div>
 </template>
