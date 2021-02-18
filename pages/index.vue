@@ -53,7 +53,8 @@ export default {
   data () {
     return {
       meta: {
-        title: 'トップページのタイトル',
+        title: 'サイトタイトル',
+        titleElement: 'サイトタイトル',
         description: 'ページ個別のディスクリプション',
         keywords: 'ページ個別のキーワード',
         type: 'article',
