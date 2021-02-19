@@ -50,9 +50,24 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    scss: [
+      '~/assets/sass/common/base/_variable.scss',
+      '~/assets/sass/common/base/_mixin.scss'
+    ]
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    postcss: {
+      preset: {
+        autoprefixer: {
+          grid: true
+        }
+      }
+    }
   }
 }

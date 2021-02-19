@@ -9,8 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
+    "autoprefixer": "^10.2.4",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.5",
+    "postcss-cli": "^8.3.1",
     "vue2-smooth-scroll": "^1.5.0"
   },
   "devDependencies": {
