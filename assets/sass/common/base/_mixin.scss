@@ -1,1 +1,53 @@
 /* mixin */
+
+/*doc
+---
+title: fzlh
+name: fzlh
+category: mixins
+---
+
+フォントサイズと行高を指定
+
+例）フォントサイズを16px、行の高さを24px（出力するのはフォントサイズに対する比率）に指定
+@include fzlh(16, 24);
+↓
+font-size: 16px; line-height: 1.5;
+*/
+
+@mixin fzlh($fz, $lh){
+  font-size: $fz * 1px; line-height: $lh / $fz *1;
+}
+
+/*doc
+---
+title: mediaquery
+name: mediaquery
+category: mixins
+---
+
+メディアクエリを指定
+$breakpointは_variable.scssで指定
+
+例）
+セレクタ {
+  // SP・PCに適用
+  @include for-sp {
+    // SPのみに適用
+  }
+  @include for-pc {
+    // PCのみに適用
+  }
+}
+*/
+@mixin for-sp {
+  @media screen and ( max-width: $breakpoint ) {
+    @content;
+  }
+}
+
+@mixin for-pc {
+  @media screen and ( min-width: $breakpoint + 1px ) {
+    @content;
+  }
+}
