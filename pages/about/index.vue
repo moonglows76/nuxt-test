@@ -56,12 +56,11 @@ export default {
   data () {
     return {
       meta: {
-        title: 'About',
-        titleElement: 'About | サイトタイトル',
+        title: 'About | サイトタイトル',
         description: 'Aboutページ個別のディスクリプション',
         keywords: 'Aboutページ個別のキーワード',
         type: 'article',
-        url: 'https://www.exmple.co.jp',
+        url: 'https://www.exmple.co.jp/about',
         image: 'https://example.com/ogp.png',
       },
     }

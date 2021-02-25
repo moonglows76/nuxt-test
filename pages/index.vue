@@ -57,23 +57,14 @@ export default {
     return {
       meta: {
         title: 'サイトタイトル',
-        titleElement: 'サイトタイトル',
         description: 'ページ個別のディスクリプション',
         keywords: 'ページ個別のキーワード',
-        type: 'article',
+        type: 'website',
         url: 'https://www.exmple.co.jp',
         image: 'https://example.com/ogp.png',
       },
     }
   },
-  head () {
-    return {
-      title: this.meta.title,
-      meta: [
-        { hid: 'og:title', property: 'og:title', content: this.meta.title },
-      ]
-    }
-  }
 }
 </script>
 

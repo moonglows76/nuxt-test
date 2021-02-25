@@ -8,7 +8,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'nuxt-test',
+    title: 'site name',
     htmlAttrs: {
       lang: 'ja'
     },
@@ -18,7 +18,7 @@ export default {
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
       { property: 'twitter:card', content: 'summary_large_image' },
-      { property: 'og:site_name', content: 'test site' },
+      { property: 'og:site_name', content: 'site name' },
       { hid: 'og:type', property: 'og:type', content: 'article' },
       { hid: 'og:image', property: 'og:image', content: 'https://www.exmple.co.jp/ogp.png' },
     ],
