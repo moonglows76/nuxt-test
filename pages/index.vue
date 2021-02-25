@@ -10,6 +10,9 @@
         {{ meta.title }}
         <span>red</span>
       </h1>
+      <figure class="illust">
+        <img src="~/assets/img/top/img_index_01.png" alt="">
+      </figure>
       <div class="links">
         <a
           href="https://github.com/nuxt/nuxt.js"

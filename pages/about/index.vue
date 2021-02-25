@@ -10,6 +10,9 @@
         {{ meta.title }}
         <span>red</span>
       </h1>
+      <figure class="illust">
+        <img src="~/assets/img/about/img_index_01.png" alt="">
+      </figure>
       <div class="links">
         <a
           href="https://github.com/nuxt/nuxt.js"
@@ -67,47 +70,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// 共通のscssはnuxt.config.jsで読み込む
-// 個別ページのscssは各ページ用のコンポーネント内で @import で読み込む
-// ここで読み込んだscssはnuxt.config.jsに指定したscssのあとで読み込むことになる
+// nuxt.config.jsに指定した~/assets/sass/style.scssよりもあとに下記のscssファイルを読み込みます
+// vueファイルのstyle要素内ではimportしているscssファイルも含めて、Sassの変数とmixinが使えるようにしてあります
+// - ~/assets/sass/common/base/_variable.scss
+// - ~/assets/sass/common/base/_mixin.scss
 @import "~assets/sass/about/style.scss";
 
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  // color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.button--grey {
+  transition: opacity $base-duration $base-timing;
+  &:hover {
+    opacity: $hover-opacity;
+  }
 }
 </style>
