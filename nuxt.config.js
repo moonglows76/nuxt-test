@@ -36,6 +36,12 @@ export default {
     { src: '~/assets/sass/style.scss', lang: 'scss' },
   ],
 
+  script: [
+    {
+      src: 'https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js'
+    }
+  ],
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/smooth-scroll', mode: 'client' },
