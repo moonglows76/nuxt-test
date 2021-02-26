@@ -65,7 +65,7 @@ export default {
     postcss: {
       preset: {
         autoprefixer: {
-          grid: true
+          grid: 'autoplace'
         }
       }
     }
