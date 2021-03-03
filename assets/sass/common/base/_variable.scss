@@ -3,49 +3,27 @@
 // breakpoint
 $breakpoint: 967px;
 
-// Typography
-$base-font-family: 'Noto Sans JP', sans-serif;
-$heading-font-family: 'Noto Sans JP', sans-serif;
-
-// Line height
-$base-font-size: 16px;
-$base-line-height: 26/16;
-
-// Other Sizes
-$base-border-radius: 6px;
-$base-spacing: 1.5em;
-$small-spacing: $base-spacing / 2;
-$base-z-index: 0;
-
 // Colors
 $red: red;
+$blue: #1565c0;
+$blue-light: #3b83d5;
+$gray: #333;
 $dark-gray: #000000;
 $mid-gray: #111111;
+$white: #fff;
 
 // Font Colors
-$base-font-color: #fff;
-$action-color: $red;
-
-// Border
-$base-border-color: $dark-gray;
-$base-border: 1px solid $base-border-color;
+$font-color--base: $gray;
+$action-color: $blue;
+$action-color--alt: $blue-light;
+$action-color--contrast: $white;
 
 // Background Colors
-$viewport-background-color: #000;
-
-// Animations
-$base-duration: 200ms;
-$base-timing: ease;
-
-// zindex
-$zindex-header: 10;
-
-// opacity
-$hover-opacity: 0.6;
+$viewport-background-color: $white;
 
 :root {
   // Typography
-  --font-family: system-ui, sans-serif;
+  --font-family: "Helvetica Neue", Arial, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   --font-family--heading: var(--font-family);
 
   --font-weight--thin: 100;
@@ -79,4 +57,7 @@ $hover-opacity: 0.6;
   // Animations
   --duration: 150ms;
   --timing: ease;
+
+  // opacity
+  --hover-opacity: 0.6;
 }

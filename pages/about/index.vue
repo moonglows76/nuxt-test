@@ -76,9 +76,9 @@ export default {
 @import "~assets/sass/about/style.scss";
 
 .button--grey {
-  transition: opacity $base-duration $base-timing;
+  transition: opacity var(--duration) var(--timing);
   &:hover {
-    opacity: $hover-opacity;
+    opacity: var(--hover-opacity);
   }
 }
 </style>
