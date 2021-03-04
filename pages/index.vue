@@ -42,6 +42,24 @@
           Anchor
         </a>
       </div>
+      <div class="grid-cols-4 sample-grid">
+        <div>SP・PC共通1</div>
+        <div>SP・PC共通2</div>
+        <div>SP・PC共通3</div>
+        <div>SP・PC共通4</div>
+      </div>
+      <div class="grid-cols-xs-4 sample-grid">
+        <div>SPのみ1</div>
+        <div>SPのみ2</div>
+        <div>SPのみ3</div>
+        <div>SPのみ4</div>
+      </div>
+      <div class="grid-cols-sm-4 sample-grid">
+        <div>PCのみ1</div>
+        <div>PCのみ2</div>
+        <div>PCのみ3</div>
+        <div>PCのみ4</div>
+      </div>
       <div style="height: 1500px;"></div>
       <div id="div-id">ここです</div>
       <div style="height: 1500px;"></div>
@@ -74,6 +92,12 @@ export default {
 // - ~/assets/sass/common/base/_variable.scss
 // - ~/assets/sass/common/base/_mixin.scss
 @import "~assets/sass/top/style.scss";
+.sample-grid {
+  &>* {
+    background-color: gray;
+    color: #fff;
+  }
+}
 .button--grey {
   transition: opacity var(--duration) var(--timing);
   &:hover {

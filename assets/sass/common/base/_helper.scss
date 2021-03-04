@@ -1,1 +1,62 @@
 /* helper */
+
+/*doc
+---
+title: clearfix
+name: clearfix
+category: helper
+---
+
+floatによる回りこみ解除クラス
+
+*/
+.clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+/*doc
+---
+title: grid system
+name: grid system
+category: helper
+---
+
+grid system関連
+
+.grid-cols-1〜.grid-cols-12　…　SP・PC共通のカラム設定
+.grid-cols-xs-1〜.grid-cols-xs-12　…　SPのカラム設定
+.grid-cols-sm-1〜.grid-cols-sm-12　…　PCのカラム設定
+
+*/
+@for $i from 1 through $grid-column {
+  .grid-cols-#{$i} {
+    display: grid;
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    column-gap: $grid-gap;
+  }
+}
+@include for-sp {
+  @for $i from 1 through $grid-column {
+    .grid-cols-xs-#{$i} {
+      display: grid;
+      grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+      column-gap: $grid-gap;
+    }
+  }
+}
+@include for-pc {
+  @for $i from 1 through $grid-column {
+    .grid-cols-sm-#{$i} {
+      display: grid;
+      grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+      column-gap: $grid-gap;
+    }
+  }
+}
