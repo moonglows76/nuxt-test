@@ -1,9 +1,17 @@
 /* layout */
+
+/*doc
+---
+title: container
+name: container
+category: layout
+---
+*/
+
 .container {
+  max-width: $container-max-width;
+  padding-left: $container-outer-padding;
+  padding-right: $container-outer-padding;
   margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  box-sizing: content-box;
 }
