@@ -14,7 +14,7 @@ export default {
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'viewport-fit=cover, width=device-width, initial-scale=1' },
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
       { property: 'twitter:card', content: 'summary_large_image' },
