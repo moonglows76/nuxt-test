@@ -41,13 +41,13 @@ $breakpointは_variable.scssで指定
 }
 */
 @mixin for-sp {
-  @media screen and ( max-width: $breakpoint ) {
+  @media screen and ( max-width: $breakpoint - 1px ) {
     @content;
   }
 }
 
 @mixin for-pc {
-  @media screen and ( min-width: $breakpoint + 1px ) {
+  @media screen and ( min-width: $breakpoint ) {
     @content;
   }
 }
