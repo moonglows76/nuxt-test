@@ -4,12 +4,12 @@
 $breakpoint: 967px;
 
 // grid system
-$grid-column: 12;
-$grid-gap: 14px;
+$grid-column: 12;  // カラム数
+$grid-gap: 16px;   // カラムとカラムの間の余白
 
 // container size
-$container-max-width: 1024px;
-$container-outer-padding: 24px;
+$container-max-width: 1024px;   // 真ん中寄せにするブロックの幅
+$container-outer-padding: 24px; // SP・PCともに両端に入る余白の量。$grid-gap と同じかより大きい数値を指定
 
 // Colors
 $red: red;

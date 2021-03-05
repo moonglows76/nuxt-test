@@ -25,13 +25,25 @@ name: grid system
 category: helper
 ---
 
-grid system関連
+CSS Gridを使ったgrid system関連
+IE11対応のため、複数行ある場合は利用不可
+カラムになる要素の親要素に指定
+クラス名の数値はカラム数を指定
 
 .grid-cols-1〜.grid-cols-12　…　SP・PC共通のカラム設定
 .grid-cols-xs-1〜.grid-cols-xs-12　…　SPのカラム設定
 .grid-cols-sm-1〜.grid-cols-sm-12　…　PCのカラム設定
 
 */
+[class^="grid-cols-"] {
+  box-sizing: border-box;
+  max-width: $container-max-width + $container-outer-padding * 2;
+  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-outer-padding;
+  padding-left: $container-outer-padding;
+}
 @for $i from 1 through $grid-column {
   .grid-cols-#{$i} {
     display: grid;

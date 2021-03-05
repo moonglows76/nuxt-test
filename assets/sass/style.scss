@@ -1,1 +1,32 @@
 @import "common/base/base";
+
+/*doc
+---
+title: flexbox grid system
+name: flexbox grid system
+category: helper
+---
+
+flexboxを使ったgrid system関連
+cols〜というクラスはカラムになる要素に指定
+クラス名の数値は幅を12分割したうちのいくつ分の幅かを指定
+
+.cols-xs-1〜.cols-xs-12　…　SPのカラム設定
+.cols-sm-1〜.cols-sm-12　…　PCのカラム設定
+
+ドキュメントはこちら
+http://hugeinc.github.io/flexboxgrid-sass/
+
+*/
+$grid-columns: $grid-column !default;
+$gutter-width: $grid-gap !default;
+$outer-margin: $container-outer-padding !default;
+// $breakpointsに指定する内容
+// クラスにつけるキーワード　メディアクエリでmin-widthに指定する幅　containerクラスに指定する幅（実際はcontainerクラスは使用しないけどsassで必要なので指定しておく）
+// sm (ブレークポイント幅) (ブレークポイント幅 - (ガター幅x2) )
+$breakpoints:
+  sm $breakpoint $breakpoint - $grid-gap * 2,
+  md 1200px 1168px !default;
+$flexboxgrid-max-width: $container-max-width + $container-outer-padding * 2 !default;
+@import "../../node_modules/sass-flex-mixin/flex";
+@import "../../node_modules/flexboxgrid-sass/flexboxgrid.scss";

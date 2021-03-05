@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div>
+  <div>
+    <div class="block-container">
       <NuxtLink
         to="/"
       >
@@ -42,24 +42,115 @@
           Anchor
         </a>
       </div>
+    </div>
+
+    <div class="block-container">
+      <h2>CSS Gridのグリッドシステム（複数行あるときは使わない）</h2>
+    </div>
+    <div class="grid-wrapper">
       <div class="grid-cols-4 sample-grid">
-        <div>SP・PC共通1</div>
-        <div>SP・PC共通2</div>
-        <div>SP・PC共通3</div>
-        <div>SP・PC共通4</div>
+        <div>Grid - SP・PC共通　4段組</div>
+        <div>Grid - SP・PC共通　4段組</div>
+        <div>Grid - SP・PC共通　4段組</div>
+        <div>Grid - SP・PC共通　4段組</div>
       </div>
       <div class="grid-cols-xs-4 sample-grid">
-        <div>SPのみ1</div>
-        <div>SPのみ2</div>
-        <div>SPのみ3</div>
-        <div>SPのみ4</div>
+        <div>Grid - SPのみ　4段組</div>
+        <div>Grid - SPのみ　4段組</div>
+        <div>Grid - SPのみ　4段組</div>
+        <div>Grid - SPのみ　4段組</div>
       </div>
       <div class="grid-cols-sm-4 sample-grid">
-        <div>PCのみ1</div>
-        <div>PCのみ2</div>
-        <div>PCのみ3</div>
-        <div>PCのみ4</div>
+        <div>Grid - PCのみ　4段組</div>
+        <div>Grid - PCのみ　4段組</div>
+        <div>Grid - PCのみ　4段組</div>
+        <div>Grid - PCのみ　4段組</div>
       </div>
+      <div class="grid-cols-xs-2 grid-cols-sm-4 sample-grid">
+        <div>Grid - SP　2段組　PC　4段組</div>
+        <div>Grid - SP　2段組　PC　4段組</div>
+        <div>Grid - SP　2段組　PC　4段組</div>
+        <div>Grid - SP　2段組　PC　4段組</div>
+      </div>
+    </div>
+
+    <div class="block-container">
+      <h2>flexboxのグリッドシステム（単一行でも複数行あるときでもOK）</h2>
+    </div>
+    <div class="wrapper container-fluid">
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="sample-flexbox">flexbox - SP・PC共通　4段組</div>
+        </div>
+        <div class="col-xs-3">
+          <div class="sample-flexbox">flexbox - SP・PC共通　4段組</div>
+        </div>
+        <div class="col-xs-3">
+          <div class="sample-flexbox">flexbox - SP・PC共通　4段組</div>
+        </div>
+        <div class="col-xs-3">
+          <div class="sample-flexbox">flexbox - SP・PC共通　4段組</div>
+        </div>
+        <div class="col-xs-3">
+          <div class="sample-flexbox">flexbox - SP・PC共通　4段組</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 col-sm-12">
+          <div class="sample-flexbox">flexbox - SPのみ　4段組</div>
+        </div>
+        <div class="col-xs-3 col-sm-12">
+          <div class="sample-flexbox">flexbox - SPのみ　4段組</div>
+        </div>
+        <div class="col-xs-3 col-sm-12">
+          <div class="sample-flexbox">flexbox - SPのみ　4段組</div>
+        </div>
+        <div class="col-xs-3 col-sm-12">
+          <div class="sample-flexbox">flexbox - SPのみ　4段組</div>
+        </div>
+        <div class="col-xs-3 col-sm-12">
+          <div class="sample-flexbox">flexbox - SPのみ　4段組</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-3">
+          <div class="sample-flexbox">flexbox - PCのみ　4段組</div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <div class="sample-flexbox">flexbox - PCのみ　4段組</div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <div class="sample-flexbox">flexbox - PCのみ　4段組</div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <div class="sample-flexbox">flexbox - PCのみ　4段組</div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <div class="sample-flexbox">flexbox - PCのみ　4段組</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-3">
+          <div class="sample-flexbox">flexbox - SP　2段組　PC　4段組</div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="sample-flexbox">flexbox - SP　2段組　PC　4段組</div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="sample-flexbox">flexbox - SP　2段組　PC　4段組</div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="sample-flexbox">flexbox - SP　2段組　PC　4段組</div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="sample-flexbox">flexbox - SP　2段組　PC　4段組</div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="sample-flexbox">flexbox - SP　2段組　PC　4段組</div>
+        </div>
+      </div>
+    </div>
+
       <div style="height: 1500px;"></div>
       <div id="div-id">ここです</div>
       <div style="height: 1500px;"></div>
@@ -97,6 +188,10 @@ export default {
     background-color: gray;
     color: #fff;
   }
+}
+.sample-flexbox {
+  background-color: gray;
+  color: #fff;
 }
 .button--grey {
   transition: opacity var(--duration) var(--timing);
