@@ -1,9 +1,9 @@
-figure {
-  margin: 0;
+img,picture{
+  max-width:100%;
+  height: auto;
+  display:block
 }
 
-img,
-picture {
+figure {
   margin: 0;
-  max-width: 100%;
 }

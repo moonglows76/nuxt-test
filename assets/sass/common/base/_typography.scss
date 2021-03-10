@@ -16,7 +16,6 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
 }
 
 .defs { display: none; }
@@ -60,7 +59,16 @@ hr {
   margin: var(--spacing) 0;
 }
 
-
+// アニメーションが不要な人向け
+@media(prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
 
 
 .title {

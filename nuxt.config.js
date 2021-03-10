@@ -43,6 +43,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    { src: 'normalize.css' },
     { src: '~/assets/sass/style.scss', lang: 'scss' },
   ],
 
