@@ -42,14 +42,27 @@
           Anchor
         </a>
       </div>
-      <div style="height: 1500px;"></div>
-      <div id="div-id">ここです</div>
-      <div style="height: 1500px;"></div>
+
+      <h2>Vue Slick carousel</h2>
+      <div>
+        <VueSlickCarousel :arrows="true" :dots="true" :autoplay="true" :autoplaySpeed="5000" :speed="1000">
+          <div><img src="https://dummyimage.com/1200x400/000/fff&amp;text=slide1" alt=""></div>
+          <div><img src="https://dummyimage.com/1200x400/000/fff&amp;text=slide2" alt=""></div>
+          <div><img src="https://dummyimage.com/1200x400/000/fff&amp;text=slide3" alt=""></div>
+          <div><img src="https://dummyimage.com/1200x400/000/fff&amp;text=slide4" alt=""></div>
+        </VueSlickCarousel>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
 import Meta from '~/assets/mixins/meta'
 export default {
   mixins: [Meta],
@@ -65,6 +78,7 @@ export default {
       },
     }
   },
+  components: { VueSlickCarousel },
 }
 </script>
 
@@ -75,6 +89,16 @@ export default {
 // - ~/assets/sass/common/base/_mixin.scss
 @import "~assets/sass/about/style.scss";
 
+// 子コンポーネント内のスタイル調整をするときはディープセレクタという仕組みを使います
+// Vue v3では書き方が ::v-deep(.foo) {  } と変わるようです。
+/deep/ {
+  .slick-prev,
+  .slick-next {
+    &:before {
+      color: #000;
+    }
+  }
+}
 .button--grey {
   transition: opacity var(--duration) var(--timing);
   &:hover {
