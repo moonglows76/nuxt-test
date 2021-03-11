@@ -58,9 +58,9 @@
 </template>
 
 <script>
+// 個別ページでのjsと、それに付随するcssをインポート
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-// optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 import Meta from '~/assets/mixins/meta'
@@ -78,6 +78,7 @@ export default {
       },
     }
   },
+  // インポートしたものをcomponentsに登録　→　template要素内で利用可能になります
   components: { VueSlickCarousel },
 }
 </script>
