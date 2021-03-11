@@ -50,7 +50,11 @@ export default {
   script: [
     {
       src: 'https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js'
-    }
+    },
+    {
+      src: 'svgxuse/svgxuse.js',
+      defer: true
+    },
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -68,6 +72,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/svg-sprite',
   ],
 
   styleResources: {

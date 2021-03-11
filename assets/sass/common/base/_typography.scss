@@ -70,6 +70,19 @@ hr {
   }
 }
 
+// icon SVG用のデフォルトスタイル
+// 縦横比が1:1ではないものは別途widthを指定する必要があります
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+
+
 
 .title {
   font-size: 100px;

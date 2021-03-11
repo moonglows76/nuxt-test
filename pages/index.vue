@@ -152,6 +152,29 @@
     </div>
 
     <div class="block-container">
+      <p>
+        この下はassets/sprite/svgフォルダにあるsvgを呼び出して利用しています。<br>
+        出力されるSVGはフォントサイズを指定すればサイズ調整できます。<br>
+        また文字色と同じ色がアイコンに反映されます。<br>
+        デフォルトではclass="icon sprite-icons"が指定されますが、class属性で個別のクラスを指定できます。
+      </p>
+      <svg-icon name="chevron-right" class="icon-chevron-right" />
+      <svg-icon name="chevron-left" class="icon-chevron-left" />
+      <svg-icon name="chevron-up" class="icon-chevron-up" />
+      <svg-icon name="chevron-down" class="icon-chevron-down" />
+      <pre>
+        &lt;svg-icon name="chevron-right" class="icon-chevron-right" /&gt;
+        &lt;svg-icon name="chevron-left" class="icon-chevron-left" /&gt;
+        &lt;svg-icon name="chevron-up" class="icon-chevron-up" /&gt;
+        &lt;svg-icon name="chevron-down" class="icon-chevron-down" /&gt;
+      </pre>
+      ↓
+      <pre>
+        &lt;svg-icon name="chevron-right" class="icon-chevron-right" /&gt;
+        &lt;svg-icon name="chevron-left" class="icon-chevron-left" /&gt;
+        &lt;svg-icon name="chevron-up" class="icon-chevron-up" /&gt;
+        &lt;svg-icon name="chevron-down" class="icon-chevron-down" /&gt;
+      </pre>
 
       <p>この下はスタイル確認用のダミーテキストです。</p>
 
@@ -384,6 +407,10 @@ export default {
 // - ~/assets/sass/common/base/_variable.scss
 // - ~/assets/sass/common/base/_mixin.scss
 @import "~assets/sass/top/style.scss";
+
+
+
+
 .sample-grid {
   &>* {
     background-color: gray;
@@ -394,6 +421,22 @@ export default {
   background-color: gray;
   color: #fff;
 }
+
+/deep/ {
+  .icon-chevron-right {
+    color: red;
+    font-size: 2rem;
+  }
+  .icon-chevron-left {
+    color: blue;
+    font-size: 2.5rem;
+  }
+  .icon-chevron-up {
+    color: green;
+    font-size: 3rem;
+  }
+}
+
 .button--grey {
   transition: opacity var(--duration) var(--timing);
   &:hover {
