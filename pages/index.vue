@@ -168,13 +168,6 @@
         &lt;svg-icon name="chevron-up" class="icon-chevron-up" /&gt;
         &lt;svg-icon name="chevron-down" class="icon-chevron-down" /&gt;
       </pre>
-      ↓
-      <pre>
-        &lt;svg-icon name="chevron-right" class="icon-chevron-right" /&gt;
-        &lt;svg-icon name="chevron-left" class="icon-chevron-left" /&gt;
-        &lt;svg-icon name="chevron-up" class="icon-chevron-up" /&gt;
-        &lt;svg-icon name="chevron-down" class="icon-chevron-down" /&gt;
-      </pre>
 
       <p>この下はスタイル確認用のダミーテキストです。</p>
 
@@ -422,19 +415,17 @@ export default {
   color: #fff;
 }
 
-/deep/ {
-  .icon-chevron-right {
-    color: red;
-    font-size: 2rem;
-  }
-  .icon-chevron-left {
-    color: blue;
-    font-size: 2.5rem;
-  }
-  .icon-chevron-up {
-    color: green;
-    font-size: 3rem;
-  }
+.icon-chevron-right {
+  color: red;
+  font-size: 2rem;
+}
+.icon-chevron-left {
+  color: blue;
+  font-size: 2.5rem;
+}
+.icon-chevron-up {
+  color: green;
+  font-size: 3rem;
 }
 
 .button--grey {
