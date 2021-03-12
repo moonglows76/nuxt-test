@@ -52,7 +52,7 @@ export default {
       src: 'https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js'
     },
     {
-      src: 'svgxuse/svgxuse.js',
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js',
       defer: true
     },
   ],
