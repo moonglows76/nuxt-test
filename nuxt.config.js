@@ -91,5 +91,10 @@ export default {
         }
       }
     }
+  },
+
+  // storybook
+  storybook: {
+    // Options
   }
 }
