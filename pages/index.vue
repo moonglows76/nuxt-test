@@ -36,7 +36,6 @@
         </NuxtLink>
         <a
           href="#div-id"
-          v-smooth-scroll
           class="button--grey"
         >
           Anchor
