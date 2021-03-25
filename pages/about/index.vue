@@ -91,14 +91,14 @@ export default {
 
 // 子コンポーネント内のスタイル調整をするときはディープセレクタという仕組みを使います
 // Vue v3では書き方が ::v-deep(.foo) {  } と変わるようです。
-/deep/ {
+// /deep/ {
   .slick-prev,
   .slick-next {
     &:before {
       color: #000;
     }
   }
-}
+// }
 .button--grey {
   transition: opacity var(--duration) var(--timing);
   &:hover {
