@@ -19,6 +19,7 @@
     "nuxt": "^2.14.5",
     "postcss-cli": "^8.3.1",
     "sass-flex-mixin": "^1.0.3",
+    "vue-scrollto": "^2.20.0",
     "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {

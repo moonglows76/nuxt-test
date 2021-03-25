@@ -34,12 +34,13 @@
         >
           About
         </NuxtLink>
-        <a
-          href="#div-id"
+        <NuxtLink
+          v-scroll-to="'#div-id'"
+          to
           class="button--grey"
         >
           Anchor
-        </a>
+        </NuxtLink>
       </div>
     </div>
 
@@ -369,7 +370,8 @@
           </div>
       </form>
 
-      <div id="div-id">ここです</div>
+      <div id="div-id">div-idはここです</div>
+      <div style="height: 1500px;">これ</div>
     </div>
   </div>
 </template>
