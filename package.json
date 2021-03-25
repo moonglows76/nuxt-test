@@ -17,6 +17,7 @@
     "flexboxgrid-sass": "^8.0.5",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.5",
+    "postcss": "^8.1.0",
     "postcss-cli": "^8.3.1",
     "sass": "^1.32.8",
     "sass-flex-mixin": "^1.0.3",
