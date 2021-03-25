@@ -35,11 +35,18 @@
           About
         </NuxtLink>
         <a
-          href="#div-id"
+          href="#"
+          v-scroll-to="'#div-id'"
+          class="button--grey">
+          a要素ページ内リンク
+        </a>
+        <NuxtLink
+          v-scroll-to="'#div-id'"
+          to
           class="button--grey"
         >
-          Anchor
-        </a>
+          NuxtLinkページ内リンク
+        </NuxtLink>
       </div>
 
       <h2>Vue Slick carousel</h2>
@@ -50,6 +57,11 @@
           <div><img src="https://dummyimage.com/1200x400/000/fff&amp;text=slide3" alt=""></div>
           <div><img src="https://dummyimage.com/1200x400/000/fff&amp;text=slide4" alt=""></div>
         </VueSlickCarousel>
+      </div>
+      <div class="block-container">
+        <div style="height: 1500px;">これ</div>
+        <div id="div-id">div-idはここです</div>
+        <div style="height: 1500px;">これ</div>
       </div>
 
     </div>

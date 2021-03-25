@@ -34,12 +34,21 @@
         >
           About
         </NuxtLink>
-        <NuxtLink
+        <a
+          href="#"
           v-scroll-to="'#div-id'"
+          class="button--grey">
+          a要素ページ内リンク
+        </a>
+        <NuxtLink
+          v-scroll-to="{
+            el: '#div-id',
+            offset: -200
+          }"
           to
           class="button--grey"
         >
-          Anchor
+          NuxtLinkページ内リンク
         </NuxtLink>
       </div>
     </div>
