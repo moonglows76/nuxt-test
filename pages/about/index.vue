@@ -101,16 +101,16 @@ export default {
 // - ~/assets/sass/common/base/_mixin.scss
 @import "~assets/sass/about/style.scss";
 
-// 子コンポーネント内のスタイル調整をするときはディープセレクタという仕組みを使います
-// Vue v3では書き方が ::v-deep(.foo) {  } と変わるようです。
-// /deep/ {
+// 親コンポーネントから子コンポーネント内のスタイル調整をするときは ::v-deep を使います
+// 下記はサンプルとして、VueSlickCarouselコンポーネント内の.slick-prev, .slick-nextに色を付けるため、セレクタに::v-deepを付け加えています
+::v-deep {
   .slick-prev,
   .slick-next {
     &:before {
       color: #000;
     }
   }
-// }
+}
 .button--grey {
   transition: opacity var(--duration) var(--timing);
   &:hover {
