@@ -1,3 +1,6 @@
+const Sass = require('sass')
+const Fiber = require('fibers')
+
 export default {
   server: {
     host: '0'
@@ -89,6 +92,14 @@ export default {
       preset: {
         autoprefixer: {
           grid: 'autoplace'
+        }
+      }
+    },
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber
         }
       }
     }

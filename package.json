@@ -13,6 +13,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "core-js": "^3.6.5",
+    "fibers": "^5.0.0",
     "flexboxgrid-sass": "^8.0.5",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.5",
