@@ -13,6 +13,9 @@
       <figure class="illust">
         <img src="~/assets/img/about/img_index_01.png" alt="">
       </figure>
+      <figure class="illust-dog">
+        <img src="~/assets/img/about/img_index_02.jpg" alt="" class="ofi">
+      </figure>
       <div class="links">
         <a
           href="https://github.com/nuxt/nuxt.js"
@@ -115,6 +118,15 @@ export default {
   transition: opacity var(--duration) var(--timing);
   &:hover {
     opacity: var(--hover-opacity);
+  }
+}
+.illust-dog {
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center center;
+    font-family: 'object-fit: cover; object-position: center center;';
   }
 }
 </style>
