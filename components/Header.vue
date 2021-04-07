@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header">
     ロゴ
   </header>
 </template>
@@ -9,5 +9,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+.header {
+  display: block;
+}
 </style>
