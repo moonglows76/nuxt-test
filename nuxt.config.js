@@ -77,7 +77,15 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
+    'nuxt-mq',
   ],
+  'mq': {
+    defaultBreakpoint: 'sm',
+    breakpoints: {
+      sm: 968,
+      md: Infinity
+    }
+  },
 
   styleResources: {
     scss: [

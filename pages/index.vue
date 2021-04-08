@@ -1,6 +1,9 @@
 <template>
   <div>
     <div class="block-container">
+      <p>幅によって要素を出し分け↓</p>
+      <div v-if="$mq==='sm'">幅が狭い ($mq==='sm')</div>
+      <div v-else-if="$mq==='md'">幅が広い ($mq==='md')</div>
       <NuxtLink
         to="/"
       >
