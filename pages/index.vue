@@ -391,8 +391,6 @@
 
 <script>
 import Meta from '~/assets/mixins/meta'
-import objectFitImages from 'object-fit-images'
-objectFitImages()
 
 export default {
   mixins: [Meta],

@@ -14,7 +14,7 @@
         <img src="~/assets/img/about/img_index_01.png" alt="">
       </figure>
       <figure class="illust-dog">
-        <img src="~/assets/img/about/img_index_02.jpg" alt="" class="ofi">
+        <img src="~/assets/img/about/img_index_02.jpg" alt="">
       </figure>
       <div class="links">
         <a
