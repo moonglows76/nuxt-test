@@ -3,7 +3,8 @@
     <div class="block-container">
       <p>幅によって要素を出し分け↓</p>
       <div v-if="$mq==='sm'">幅が狭い ($mq==='sm')</div>
-      <div v-else-if="$mq==='md'">幅が広い ($mq==='md')</div>
+      <div v-else>幅が広い ($mq==='md')</div>
+      <div>computedオプションで$mqを見て処理：{{mqText}}</div>
       <NuxtLink
         to="/"
       >
@@ -407,6 +408,11 @@ export default {
       },
     }
   },
+  computed: {
+    mqText() {
+      return this.$mq === 'sm' ? '幅が狭い' : '幅が広い'
+    }
+  }
 }
 </script>
 
