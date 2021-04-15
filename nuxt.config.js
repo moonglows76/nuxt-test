@@ -115,5 +115,9 @@ export default {
   // storybook
   storybook: {
     // Options
+  },
+
+  generate: {
+    dir: '../dist'
   }
 }
