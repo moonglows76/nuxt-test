@@ -54,16 +54,13 @@ export default {
     {
       src: 'https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js'
     },
-    {
-      src: 'https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js',
-      defer: true
-    },
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~plugins/object-fit-images', mode: 'client' },
     { src: '~plugins/vue-scrollto', mode: 'client' },
+    { src: '~plugins/svg4everybody.js', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
