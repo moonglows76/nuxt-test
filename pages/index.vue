@@ -384,7 +384,13 @@
       </form>
 
       <div id="div-id">div-idはここです</div>
-      <div style="height: 1500px;">これ</div>
+      <div>これ</div>
+      <div class="block__element__element">
+        エラー
+      </div>
+      <div class="block--mod--mod">
+        エラー
+      </div>
     </div>
   </div>
 </template>
@@ -453,5 +459,13 @@ export default {
   &:hover {
     opacity: var(--hover-opacity);
   }
+}
+
+// bemのlintでエラーにしてほしい
+.block__element__element {
+  color: #fff;
+}
+.block--mod--mod {
+  color: #fff;
 }
 </style>

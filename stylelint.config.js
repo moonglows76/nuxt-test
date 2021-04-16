@@ -1,6 +1,9 @@
 module.exports = {
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
   "extends": [
-    "stylelint-config-recommended-scss"
+    "stylelint-config-recommended-scss",
   ],
   "rules": {
     "block-no-empty": null,
@@ -18,6 +21,9 @@ module.exports = {
       {
         "ignorePseudoElements": ["v-deep"]
       }
-    ]
+    ],
+    "selector-bem-pattern": {
+      preset: "bem",
+    },
   }
 }
