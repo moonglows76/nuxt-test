@@ -83,12 +83,12 @@ export default {
   data () {
     return {
       meta: {
+        robots: 'noindex, nofollow',
         title: 'About | サイトタイトル',
         description: 'Aboutページ個別のディスクリプション',
-        keywords: 'Aboutページ個別のキーワード',
-        type: 'article',
-        url: 'https://www.exmple.co.jp/about',
-        image: 'https://example.com/ogp.png',
+        image: this.$config.baseURL + '/ogp.png',
+        canonical: this.$config.baseURL + this.$route.path,
+        publisher: 'https://www.facebook.com/synapsestation/',
       },
     }
   },

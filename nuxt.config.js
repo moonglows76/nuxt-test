@@ -6,6 +6,10 @@ export default {
     host: '0'
   },
 
+  publicRuntimeConfig: {
+    baseURL: 'https://www.exmple.co.jp'
+  },
+
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
@@ -18,8 +22,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'viewport-fit=cover, width=device-width, initial-scale=1' },
-      { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
+      { name: 'google-site-verification', content: '' },
+      { name: 'msvalidate.01', content: '' },
+      { property: 'og:locale', content: 'ja_JP' },
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'og:site_name', content: 'site name' },
       { hid: 'og:type', property: 'og:type', content: 'article' },

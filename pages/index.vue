@@ -405,10 +405,10 @@ export default {
       meta: {
         title: 'サイトタイトル',
         description: 'ページ個別のディスクリプション',
-        keywords: 'ページ個別のキーワード',
         type: 'website',
-        url: 'https://www.exmple.co.jp',
-        image: 'https://example.com/ogp.png',
+        image: this.$config.baseURL + '/ogp.png',
+        canonical: this.$config.baseURL + this.$route.path,
+        publisher: 'https://www.facebook.com/synapsestation/',
       },
     }
   },
