@@ -22,7 +22,7 @@ module.exports = {
         "ignorePseudoElements": ["v-deep"]
       }
     ],
-    "selector-bem-pattern": {
+    "plugin/selector-bem-pattern": {
       preset: "bem",
     },
   }

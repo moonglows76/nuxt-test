@@ -385,11 +385,13 @@
 
       <div id="div-id">div-idはここです</div>
       <div>これ</div>
-      <div class="block__element__element">
-        エラー
-      </div>
-      <div class="block--mod--mod">
-        エラー
+      <div class="article-list">
+        <div class="article-list__item article-list__item--active">
+          アクティブ
+        </div>
+        <div class="article-list__item">
+          ノーマル
+        </div>
       </div>
     </div>
   </div>
@@ -461,11 +463,31 @@ export default {
   }
 }
 
-// bemのlintでエラーにしてほしい
-.block__element__element {
-  color: #fff;
+// article-listブロックのlint設定例
+/** @define article-list */
+.article-list {
+  &__item {
+    color: #f0f;
+    &--active {
+      color: red;
+    }
+  }
 }
-.block--mod--mod {
-  color: #fff;
+/** @end */
+
+// article-detailブロックのlint設定例
+/** @define article-detail */
+.article-detail {
+  &__title {
+
+  }
+  &__content {
+
+  }
+  &__img {
+    &--wide {
+
+    }
+  }
 }
 </style>
