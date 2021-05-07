@@ -466,6 +466,13 @@ export default {
 // article-listブロックのlint設定例
 /** @define article-list */
 .article-list {
+  // 1セレクタだけlintを無視する書き方
+  /* postcss-bem-linter: ignore */
+  &.is-active {
+    /* postcss-bem-linter: ignore */
+    &__item {
+    }
+  }
   &__item {
     color: #f0f;
     &--active {
