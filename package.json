@@ -10,6 +10,7 @@
     "storybook": "nuxt storybook"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "core-js": "^3.6.5",

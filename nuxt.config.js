@@ -1,13 +1,22 @@
 const Sass = require('sass')
 const Fiber = require('fibers')
 
+const baseURL = 'https://www.exmple.co.jp'
+
+
 export default {
   server: {
     host: '0'
   },
 
+  // $configを使ってクライアントとサーバー両方からアクセス可能
   publicRuntimeConfig: {
-    baseURL: 'https://www.exmple.co.jp'
+    baseURL: baseURL
+  },
+
+  // $configを使ってサーバーからのみアクセス可能。publicRuntimeConfigを上書きする
+  privateRuntimeConfig: {
+    baseURL: baseURL
   },
 
   // Target (https://go.nuxtjs.dev/config-target)
@@ -29,7 +38,7 @@ export default {
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'og:site_name', content: 'site name' },
       { hid: 'og:type', property: 'og:type', content: 'article' },
-      { hid: 'og:image', property: 'og:image', content: 'https://www.exmple.co.jp/ogp.png' },
+      { hid: 'og:image', property: 'og:image', content: baseURL + '/ogp.png' },
     ],
 
     link: [
@@ -82,13 +91,50 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
     'nuxt-mq',
+    '@nuxtjs/sitemap',
   ],
+
+  // メディアクエリ用
   'mq': {
     defaultBreakpoint: 'sm',
     breakpoints: {
       sm: 968,
       md: Infinity
     }
+  },
+
+  // sitemap.xml生成用（npm run generateでdist/sitemap.xmlとして生成されます）
+  // pagesフォルダ内の固定ページは自動でsitemap.xmlに入ります
+  // 動的ページは下記でAPIを読み込んで
+  sitemap: {
+    hostname: baseURL,
+    gzip: true,
+    path: '/sitemap.xml',
+    // ブログなど、APIからページを生成するときに利用
+    // routes: async () => {
+    //   const apiBaseUrl = 'https://api-host/api/v1'
+    //   const results = [
+    //     {
+    //       url: '/',
+    //       changefreq: 'daily'
+    //     },
+    //     {
+    //       url: '/about',
+    //       changefreq: 'monthly'
+    //     }
+    //   ]
+    //   const { data } = await axios.get(`${apiBaseUrl}/entities/`)
+    //   if (data) {
+    //     data.forEach((entity) => {
+    //       results.push({
+    //         url: `/entities/${entity.slug}`,
+    //         lastmod: entity.updated_at,
+    //         changefreq: 'weekly'
+    //       })
+    //     })
+    //   }
+    //   return results
+    // },
   },
 
   styleResources: {
@@ -123,6 +169,7 @@ export default {
     // Options
   },
 
+  // 静的ファイル生成フォルダ
   generate: {
     dir: '../dist'
   }
