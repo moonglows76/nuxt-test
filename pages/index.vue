@@ -464,9 +464,10 @@ export default {
 }
 
 // article-listブロックのlint設定例
+// ブロックの定義を @defineで行う（コメントの開始記号は /** です。ご留意を。）
 /** @define article-list */
 .article-list {
-  // 1セレクタだけlintを無視する書き方
+  // あとに続く1セレクタだけlintを無視する書き方（このコメントの開始記号は通常の /* です。ご留意を。）
   /* postcss-bem-linter: ignore */
   &.is-active {
     /* postcss-bem-linter: ignore */
@@ -480,6 +481,7 @@ export default {
     }
   }
 }
+// @endでブロックの定義を終了する（コメントの開始記号は /** です。ご留意を。）
 /** @end */
 
 // article-detailブロックのlint設定例
@@ -497,4 +499,5 @@ export default {
     }
   }
 }
+/** @end */
 </style>
