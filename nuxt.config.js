@@ -1,22 +1,26 @@
 const Sass = require('sass')
 const Fiber = require('fibers')
 
-const baseURL = 'https://www.exmple.co.jp'
-
+// process.env.NODE_ENVはnode.jsが自動でつくる環境変数
+// npm run dev時（開発サーバ）はdevelopment、
+// npm run start時（静的ホスティング）はproductionが入ります
+const { API_KEY, BASE_URL, API_URL, NODE_ENV } = process.env;
 
 export default {
   server: {
     host: '0'
   },
 
-  // $configを使ってクライアントとサーバー両方からアクセス可能
+  // $configを使ってクライアントとサーバー両方からアクセス可能（envを読むのはサーバだけ）
   publicRuntimeConfig: {
-    baseURL: baseURL
+    baseURL: BASE_URL,
+    apiURL: API_URL,
+    apiKey: NODE_ENV !== 'production' ? API_KEY : undefined
   },
 
-  // $configを使ってサーバーからのみアクセス可能。publicRuntimeConfigを上書きする
+  // $configを使ってサーバーからのみアクセス可能。publicRuntimeConfigを上書き可能
   privateRuntimeConfig: {
-    baseURL: baseURL
+    apiKey: API_KEY,
   },
 
   // Target (https://go.nuxtjs.dev/config-target)
@@ -38,7 +42,7 @@ export default {
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'og:site_name', content: 'site name' },
       { hid: 'og:type', property: 'og:type', content: 'article' },
-      { hid: 'og:image', property: 'og:image', content: baseURL + '/ogp.png' },
+      { hid: 'og:image', property: 'og:image', content: BASE_URL + '/ogp.png' },
     ],
 
     link: [
@@ -107,12 +111,12 @@ export default {
   // pagesフォルダ内の固定ページは自動でsitemap.xmlに入ります
   // 動的ページは下記でAPIを読み込んで
   sitemap: {
-    hostname: baseURL,
+    hostname: BASE_URL,
     gzip: true,
     path: '/sitemap.xml',
     // ブログなど、APIからページを生成するときに利用
     // routes: async () => {
-    //   const apiBaseUrl = 'https://api-host/api/v1'
+    //   const apiBaseUrl = process.env.API_URL
     //   const results = [
     //     {
     //       url: '/',

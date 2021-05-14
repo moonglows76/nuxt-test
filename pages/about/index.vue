@@ -80,14 +80,14 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import Meta from '~/assets/mixins/meta'
 export default {
   mixins: [Meta],
-  data () {
+  data ({$config, $route}) {
     return {
       meta: {
         robots: 'noindex, nofollow',
         title: 'About | サイトタイトル',
         description: 'Aboutページ個別のディスクリプション',
-        image: this.$config.baseURL + '/ogp.png',
-        canonical: this.$config.baseURL + this.$route.path,
+        image: $config.baseURL + '/ogp.png',
+        canonical: $config.baseURL + $route.path,
         publisher: 'https://www.facebook.com/synapsestation/',
       },
     }

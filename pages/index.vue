@@ -54,6 +54,11 @@
         >
           NuxtLinkページ内リンク
         </NuxtLink>
+        <div>
+          {{baseURL}}<br>
+          {{apiURL}}<br>
+          {{apiKey}}
+        </div>
       </div>
     </div>
 
@@ -402,14 +407,14 @@ import Meta from '~/assets/mixins/meta'
 
 export default {
   mixins: [Meta],
-  data () {
+  data ({$config, $route}) {
     return {
       meta: {
         title: 'サイトタイトル',
         description: 'ページ個別のディスクリプション',
         type: 'website',
-        image: this.$config.baseURL + '/ogp.png',
-        canonical: this.$config.baseURL + this.$route.path,
+        image: $config.baseURL + '/ogp.png',
+        canonical: $config.baseURL + $route.path,
         publisher: 'https://www.facebook.com/synapsestation/',
       },
     }
@@ -417,7 +422,16 @@ export default {
   computed: {
     mqText() {
       return this.$mq === 'sm' ? '幅が狭い' : '幅が広い'
-    }
+    },
+    baseURL() {
+      return this.$config.baseURL
+    },
+    apiURL() {
+      return this.$config.apiURL
+    },
+    apiKey() {
+      return this.$config.apiKey
+    },
   }
 }
 </script>
