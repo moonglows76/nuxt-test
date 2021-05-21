@@ -4,7 +4,7 @@ const Fiber = require('fibers')
 // process.env.NODE_ENVはnode.jsが自動でつくる環境変数
 // npm run dev時（開発サーバ）はdevelopment、
 // npm run start時（静的ホスティング）はproductionが入ります
-const { API_KEY, BASE_URL, API_URL, NODE_ENV } = process.env;
+const { API_KEY, BASE_URL, API_URL, GTM_ID, NODE_ENV } = process.env;
 
 export default {
   server: {
@@ -87,7 +87,8 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/gtm',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -97,6 +98,12 @@ export default {
     'nuxt-mq',
     '@nuxtjs/sitemap',
   ],
+
+  gtm: {
+    id: GTM_ID,
+    pageTracking: true,
+    // enabled: true, // 常に（npm run devの場合も）GTMイベントを送信して送信内容を確認
+  },
 
   // メディアクエリ用
   'mq': {
