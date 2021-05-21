@@ -36,8 +36,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'viewport-fit=cover, width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#ffffff' },
-      { name: 'google-site-verification', content: '' },
-      { name: 'msvalidate.01', content: '' },
+      // { name: 'google-site-verification', content: '' },
+      // { name: 'msvalidate.01', content: '' },
       { property: 'og:locale', content: 'ja_JP' },
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'og:site_name', content: 'site name' },
@@ -49,7 +49,7 @@ export default {
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-      { rel: 'manifest', href: '/site.webmanifest' },
+      // { rel: 'manifest', href: '/site.webmanifest' },
       {
         rel: 'preconnect',
         href:
