@@ -22,12 +22,13 @@ $ npm run storybook
 
 ## 環境変数の定義
 
-nuxt.config.jsと同じ階層に `.env` を作って、3つの環境変数を定義してください。
+nuxt.config.jsと同じ階層に `.env` を作って、4つの環境変数を定義してください。
 
 ```
 BASE_URL=https://www.exmple.co.jp
 API_URL=https://www.exmple.co.jp/api
 API_KEY=test
+GTM_ID=GTM-XXXXXXX
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
