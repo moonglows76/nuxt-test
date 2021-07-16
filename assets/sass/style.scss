@@ -28,5 +28,5 @@ $breakpoints:
   sm $breakpoint $breakpoint - $grid-gap * 2,
   md 1200px 1168px !default;
 $flexboxgrid-max-width: $container-max-width + $container-outer-padding * 2 !default;
-@import "../../node_modules/sass-flex-mixin/flex";
-@import "../../node_modules/flexboxgrid-sass/flexboxgrid.scss";
+@import "common/vendor/flex";
+@import "common/vendor/flexboxgrid";
