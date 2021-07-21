@@ -23,7 +23,7 @@
     "object-fit-images": "^3.2.4",
     "sass": "^1.35.2",
     "sass-flex-mixin": "^1.0.3",
-    "sass-loader": "^10.1.1",
+    "sass-loader": "^10.2.0",
     "svg4everybody": "^2.1.9",
     "vue-scrollto": "^2.20.0",
     "vue-slick-carousel": "^1.0.6"
@@ -33,7 +33,7 @@
     "@nuxtjs/stylelint-module": "^4.0.0",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended-scss": "^4.3.0",
-    "stylelint-scss": "^3.19.0",
+    "stylelint-scss": "^3.20.1",
     "stylelint-selector-bem-pattern": "^2.1.0"
   }
 }
